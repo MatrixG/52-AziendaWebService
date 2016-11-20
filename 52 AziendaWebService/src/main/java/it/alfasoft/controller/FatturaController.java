@@ -1,11 +1,8 @@
 package it.alfasoft.controller;
 
 import java.util.List;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
-//import javax.ws.rs.core.Response;
-
 import it.alfasoft.alex.bean.Fattura;
 import it.alfasoft.clientWebServer.InvocazioneFattura;
 
