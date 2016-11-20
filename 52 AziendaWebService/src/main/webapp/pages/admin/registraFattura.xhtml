@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../../layout/layout.xhtml">
+
+	<ui:define name="menu">
+		<ui:include src="menu.xhtml"></ui:include>
+	</ui:define>
+	<ui:define name="content">
+		<p:panel id="panel" header="Inserisci una Nuova Fattura">
+			<br />
+			<p:separator />
+			<br />
+			<br />
+			
+			
+			<h:form>
+
+				<h:panelGrid id="grid" columns="3" cellpadding="7">
+					<p:outputLabel for="date" value="Data di emissione" />
+					<p:calendar id="date" value="#{fattura.dataEmissione}"
+						pattern="dd/MM/yyyy" mask="true" required="true" 
+						requiredMessage="Questo campo è obbligatorio"/>
+					<p:message for="date" display="text"/>
+					<p:outputLabel for="importo" value="Importo:" />
+					<p:inputNumber id="importo" value="#{fattura.importo}" symbol=" EUR" symbolPosition="s" 
+                        decimalSeparator="," thousandSeparator="." required="true"
+                        requiredMessage="Questo campo è obbligatorio" />                  
+					<p:message for="importo" display="text"/>
+					<p:outputLabel for="codice" value="Codice Fattura:" />
+					<p:inputText id="codice" value="#{fattura.codFattura}"
+						label="Codice" required="true"
+						requiredMessage="Questo campo è obbligatorio" />
+					<p:message for="codice" display="text" />
+					<br />
+					<p:commandButton style="float:right" value="Registra"
+						action="#{cntrFatture.registraFattura(fattura)}" update="grid" />
+				</h:panelGrid>
+			</h:form>
+
+		</p:panel>
+	</ui:define>
+
+</ui:composition>
+</html>

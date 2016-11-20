@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition>
+	<h:form>
+
+		<p:menu>
+			<p:submenu label="Home">
+				<p:menuitem value="Home" icon="fa fa-home" outcome="home" />
+			</p:submenu>
+			<p:submenu label="Fatture">
+				<p:menuitem value="Registra Fattura" icon="fa fa-plus" outcome="registraFattura" />
+				<p:menuitem value="Visualizza Fatture" icon="fa fa-eye" outcome="visualizzaFatture"/>
+				<p:menuitem value="Cerca Fattura" icon="fa fa-search"  outcome="cercaFattura"/>
+			</p:submenu>
+		</p:menu>
+
+	</h:form>
+</ui:composition>
+</html>
