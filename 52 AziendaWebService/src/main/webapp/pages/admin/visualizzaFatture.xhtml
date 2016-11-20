@@ -13,7 +13,19 @@
 		<ui:include src="menu.xhtml"></ui:include>
 	</ui:define>
 	<ui:define name="content">
-		<p:editor />
+		<p:dataTable var="fattura" value="#{viewFatture.fatture}">
+			<p:column headerText="Codice Fattura">
+				<h:outputText value="#{fattura.codice_fattura}" />
+			</p:column>
+
+			<p:column headerText="Data di inseriemnto">
+				<h:outputText value="#{fattura.data_emissione}" />
+			</p:column>
+
+			<p:column headerText="Importo">
+				<h:outputText value="#{fattura.importo}" />
+			</p:column>
+		</p:dataTable>
 	</ui:define>
 
 </ui:composition>

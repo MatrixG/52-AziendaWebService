@@ -10,7 +10,6 @@ import it.alfasoft.clientWebServer.InvocazioneFattura;
 @ViewScoped
 public class FatturaController {
 
-	private List<Fattura> fatture;
 	private InvocazioneFattura invocazione;
 
 	public FatturaController() {
@@ -18,18 +17,15 @@ public class FatturaController {
 		invocazione = new InvocazioneFattura();
 	}
 
-	public List<Fattura> getFatture() {
-		return fatture;
+	public String registraFattura(Fattura f) {
+
+		invocazione.inviaFattura(f).invoke();
+		return "fatturaRegistrata?faces-reidrect-true";
 	}
 
-	public void setFatture(List<Fattura> fatture) {
-		this.fatture = fatture;
+	public List<Fattura> listaFatture() {
+
+		return invocazione.listaFatture();
 	}
-	
-    public String registraFattura(Fattura f){
-    	
-    	invocazione.inviaFattura(f).invoke();
-    	return "fatturaRegistrata?faces-reidrect-true";
-    }
 
 }

@@ -9,8 +9,7 @@ public class Invocazione {
 	protected Client cliente = ClientBuilder.newClient();
 	protected WebTarget addressTarget;
 	protected WebTarget appTarget;
-	
-	
+
 	protected Invocazione() {
 
 		addressTarget = cliente.target("http://localhost:8086");
