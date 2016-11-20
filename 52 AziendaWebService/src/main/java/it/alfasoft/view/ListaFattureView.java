@@ -8,7 +8,7 @@ import javax.faces.bean.ViewScoped;
 import it.alfasoft.alex.bean.Fattura;
 import it.alfasoft.controller.FatturaController;
 
-@ManagedBean (name = "viewFatture")
+@ManagedBean(name = "viewFatture")
 @ViewScoped
 public class ListaFattureView implements Serializable {
 
@@ -16,25 +16,24 @@ public class ListaFattureView implements Serializable {
 	private List<Fattura> fatture;
 
 	public ListaFattureView() {
-		
+
 	}
-	
+
 	@PostConstruct
-	public void init(){
-		setFatture(new FatturaController().listaFatture());
-		for (Fattura f : fatture){
-			System.out.println(f.getCodice_fattura() + " " + f.getImporto());
-		}
+	public void init() {
+
+		fatture = new FatturaController().listaFatture();
+
 	}
 
 	public List<Fattura> getFatture() {
+		
 		return fatture;
 	}
 
 	public void setFatture(List<Fattura> fatture) {
-		System.out.println("Sono entrato berta");
+
 		this.fatture = fatture;
 	}
-	
 
 }
