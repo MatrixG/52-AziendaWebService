@@ -18,6 +18,7 @@ public class FatturaController {
 
 	public FatturaController() {
 
+		invocazione = new InvocazioneFattura();
 	}
 
 	public List<Fattura> getFatture() {

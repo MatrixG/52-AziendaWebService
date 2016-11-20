@@ -24,7 +24,7 @@
 
 				<h:panelGrid id="grid" columns="3" cellpadding="7">
 					<p:outputLabel for="date" value="Data di emissione" />
-					<p:calendar id="date" value="#{fattura.dataEmissione}"
+					<p:calendar id="date" value="#{fattura.data_emissione}"
 						pattern="dd/MM/yyyy" mask="true" required="true" 
 						requiredMessage="Questo campo è obbligatorio"/>
 					<p:message for="date" display="text"/>
@@ -34,7 +34,7 @@
                         requiredMessage="Questo campo è obbligatorio" />                  
 					<p:message for="importo" display="text"/>
 					<p:outputLabel for="codice" value="Codice Fattura:" />
-					<p:inputText id="codice" value="#{fattura.codFattura}"
+					<p:inputText id="codice" value="#{fattura.codice_fattura}"
 						label="Codice" required="true"
 						requiredMessage="Questo campo è obbligatorio" />
 					<p:message for="codice" display="text" />

@@ -8,7 +8,7 @@ import it.alfasoft.alex.bean.Fattura;
 
 public class InvocazioneFattura extends Invocazione {
 
-	
+	private WebTarget prova = cliente.target("http://localhost:8086/IbmWebService/webapi/risorsa");
 	private WebTarget resourceFatturaTarget;
 	
 	public InvocazioneFattura() {
@@ -18,6 +18,6 @@ public class InvocazioneFattura extends Invocazione {
 	
 	public Invocation inviaFattura(Fattura f) {
 		
-		return resourceFatturaTarget.request().buildPost(Entity.json(f));
+		return prova.request().buildPost(Entity.json(f));
 	}
 }

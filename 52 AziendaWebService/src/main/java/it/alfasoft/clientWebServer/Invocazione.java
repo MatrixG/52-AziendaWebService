@@ -16,7 +16,7 @@ public class Invocazione {
 	protected Invocazione() {
 		
 		baseTarget = cliente.target("http://fatture");
-		addressTarget = baseTarget.path("/localhost:8085");
+		addressTarget = baseTarget.path("/localhost:8086");
 		appTarget = addressTarget.path("/IbmWebService/webapi");
 	}
 }

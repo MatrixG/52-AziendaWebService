@@ -8,20 +8,20 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Fattura {
 
-	private Date dataEmissione;
+	private Date data_emissione;
 	private double importo;
-	private String codFattura;
+	private String codice_fattura;
 
 	public Fattura() {
 
 	}
 
-	public Date getDataEmissione() {
-		return dataEmissione;
+	public Date getData_emissione() {
+		return data_emissione;
 	}
 
-	public void setDataEmissione(Date dataEmissione) {
-		this.dataEmissione = dataEmissione;
+	public void setData_emissione(Date data_emissione) {
+		this.data_emissione = data_emissione;
 	}
 
 	public double getImporto() {
@@ -32,12 +32,12 @@ public class Fattura {
 		this.importo = importo;
 	}
 
-	public String getCodFattura() {
-		return codFattura;
+	public String getCodice_fattura() {
+		return codice_fattura;
 	}
 
-	public void setCodFattura(String codFattura) {
-		this.codFattura = codFattura;
+	public void setCodice_fattura(String codice_fattura) {
+		this.codice_fattura = codice_fattura;
 	}
 
 }
