@@ -31,4 +31,14 @@ public class InvocazioneFattura extends Invocazione {
 									.request().get()
 									.readEntity(new GenericType<List<Fattura>>(){});
 	}
+
+	public List<Fattura> cercaFatture(String anno) {
+		return resourceFatturaTarget.path("cerca").path(anno).request()
+									.get().readEntity(new GenericType<List<Fattura>>(){});
+	}
+
+	public List<Fattura> cercaFatture(String anno, String mese) {
+		return resourceFatturaTarget.path("cerca").path(anno).path(mese).request()
+									.get().readEntity(new GenericType<List<Fattura>>(){});
+	}
 }

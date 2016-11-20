@@ -13,7 +13,32 @@
 		<ui:include src="menu.xhtml"></ui:include>
 	</ui:define>
 	<ui:define name="content">
-		<p:editor />
+		<p:panel id="panel" header="Cerca Una Fattura Per Mese / Anno">
+			<br />
+			<p:separator />
+			<br />
+			<br />
+
+
+			<h:form>
+
+				<h:panelGrid id="grid" columns="3" cellpadding="7">
+					<p:outputLabel for="anno" value="Anno:" />
+					<p:inputMask id="anno" value="#{cercaFatturaView.anno}" mask="9999"
+						required="true" requiredMessage="Questo campo è obbligatorio" />
+					<p:message for="anno" display="text" />
+					<p:outputLabel for="mese" value="Mese:" />
+					<p:selectOneMenu id="mese" value="#{cercaFatturaView.mese}"
+						style="width:125px">
+						<f:selectItems value="#{cercaFatturaView.mesi}" />
+					</p:selectOneMenu>
+					<br />
+					<p:commandButton style="float:right" value="Cerca"
+						action="#{cntrFatture.cercaFatture(cercaFatturaView)}" update="grid" />
+				</h:panelGrid>
+			</h:form>
+
+		</p:panel>
 	</ui:define>
 
 </ui:composition>
