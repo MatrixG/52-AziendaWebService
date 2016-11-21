@@ -1,4 +1,4 @@
-package it.alfasoft.clientWebServer;
+package it.alfasoft.clientWebService;
 
 import java.util.List;
 

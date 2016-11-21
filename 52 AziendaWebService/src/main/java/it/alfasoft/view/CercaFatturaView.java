@@ -94,7 +94,7 @@ public class CercaFatturaView {
 			break;
 
 		default:
-			this.mese = "-1";
+			this.mese = null;
 			break;
 		}
 	}

@@ -5,7 +5,7 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import it.alfasoft.alex.bean.Fattura;
-import it.alfasoft.clientWebServer.InvocazioneFattura;
+import it.alfasoft.clientWebService.InvocazioneFattura;
 import it.alfasoft.view.CercaFatturaView;
 
 @ManagedBean(name = "cntrFatture", eager = true)
@@ -40,7 +40,7 @@ public class FatturaController {
 		}
 		List<Fattura> temp = data.getFatture();
 		for (Fattura f : temp){
-			System.out.println(f.getCodice_fattura());
+			System.out.println(f.getCodice_fattura() + " " + f.getImporto() + " " + f.getData_emissione());
 		}
 		
 		return "risultatiCerca";

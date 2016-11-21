@@ -1,4 +1,4 @@
-package it.alfasoft.clientWebServer;
+package it.alfasoft.clientWebService;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
